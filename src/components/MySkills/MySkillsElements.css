@@ -1,0 +1,137 @@
+.title-text {
+  color: #00ff43;
+  font-size: clamp(1rem, 4vw, 3rem);
+  padding: 1rem;
+}
+.s-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.s-cards .skills-card {
+  height: 250px;
+  width: 200px;
+  position: relative;
+  border: none;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgb(54, 54, 54), rgb(45, 46, 45));
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  transition: 0.5s;
+  padding-top: 15px;
+}
+
+/* hover effect */
+.s-cards .skills-card:nth-child(1):hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 5px #00ff43, 0 5px 10px#00f742;
+  transition: 0.5s;
+}
+.s-cards .skills-card:nth-child(2):hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 5px #00a1ff, 0 7px 21px rgba(9, 177, 177, 0.7);
+  transition: 0.5s;
+}
+.s-cards .skills-card:nth-child(3):hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 5px #ff04f7, 0 5px 10px #ff04f7;
+  transition: 0.5s;
+}
+.s-cards .skills-card:nth-child(4):hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 5px rgba(81, 236, 236, 0.5),
+    0 7px 21px rgba(9, 177, 177, 0.7);
+  transition: 0.5s;
+}
+
+.percent {
+  height: 150px;
+  width: 150px;
+  background: #222;
+  transition: 0.5s;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: inset 0 15px 20px 0 rgba(0, 0, 0, 0.4);
+  margin: auto;
+}
+.percent .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.percent .number h2 {
+  color: #888;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.percent .number h2 span {
+  color: #888;
+  font-size: 24px;
+  transition: 0.5s;
+}
+.skills-card:hover .percent .number h2 {
+  color: #fff;
+  transition: 0.5s;
+  font-size: 35px;
+}
+.text {
+  margin-top: 20px;
+  color: #888;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  font-weight: 700;
+  padding: 5px;
+}
+.skills-card:hover .text {
+  color: #fff;
+  transition: 0.5s;
+}
+
+.skills-card svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  z-index: 1000;
+}
+.skills-card svg circle {
+  height: 100%;
+  width: 100%;
+  fill: none;
+  stroke: #191919;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+.skills-card svg circle:nth-child(2) {
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+.skills-card:nth-child(1) svg circle:nth-child(2) {
+  stroke: #00ff43;
+  stroke-dashoffset: calc(440 - (440 * 90) / 100);
+}
+.skills-card:nth-child(2) svg circle:nth-child(2) {
+  stroke: #00a1ff;
+  stroke-dashoffset: calc(440 - (440 * 80) / 100);
+}
+.skills-card:nth-child(3) svg circle:nth-child(2) {
+  stroke: #ff04f7;
+  stroke-dashoffset: calc(440 - (440 * 75) / 100);
+}
+.skills-card:nth-child(4) svg circle:nth-child(2) {
+  stroke: cyan;
+  stroke-dashoffset: calc(440 - (440 * 45) / 100);
+}
